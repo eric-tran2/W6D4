@@ -1,0 +1,529 @@
+  [1m[35m (39.8ms)[0m  [1m[35mCREATE DATABASE "ninety_nine_cats_development" ENCODING = 'unicode'[0m
+  ↳ bin/rails:9
+  [1m[35m (37.5ms)[0m  [1m[35mCREATE DATABASE "ninety_nine_cats_test" ENCODING = 'unicode'[0m
+  ↳ bin/rails:9
+  [1m[35m (5.1ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  ↳ bin/rails:9
+  [1m[35m (3.6ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT pg_try_advisory_lock(723150122408807205)[0m
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+Migrating to CreateCats (20210527174606)
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (3.8ms)[0m  [1m[35mCREATE TABLE "cats" ("id" bigserial primary key, "birth_date" date NOT NULL, "color" character varying NOT NULL, "name" character varying NOT NULL, "sex" character varying(1) NOT NULL, "description" text NOT NULL, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/migrate/20210527174606_create_cats.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20210527174606"]]
+  ↳ bin/rails:9
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ bin/rails:9
+  [1m[35m (0.0ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::InternalMetadata Create (0.3ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2021-05-27 18:05:33.554944"], ["updated_at", "2021-05-27 18:05:33.554944"]]
+  ↳ bin/rails:9
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT pg_advisory_unlock(723150122408807205)[0m
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT pg_try_advisory_lock(723150122408807205)[0m
+  ↳ bin/rails:9
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+Migrating to ModifyCats (20210527185019)
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (0.5ms)[0m  [1m[35mALTER TABLE "cats" ADD "age" character varying NOT NULL[0m
+  ↳ db/migrate/20210527185019_modify_cats.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20210527185019"]]
+  ↳ bin/rails:9
+  [1m[35m (1.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ bin/rails:9
+  [1m[35m (0.0ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT pg_advisory_unlock(723150122408807205)[0m
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+Started GET "/" for ::1 at 2021-05-27 14:55:41 -0400
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/eric/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /home/eric/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/railties-5.2.6/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /home/eric/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/railties-5.2.6/lib/rails/templates/rails/welcome/index.html.erb (1.2ms)
+Completed 200 OK in 5ms (Views: 2.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2021-05-27 14:56:02 -0400
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /home/eric/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/railties-5.2.6/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /home/eric/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/railties-5.2.6/lib/rails/templates/rails/welcome/index.html.erb (1.2ms)
+Completed 200 OK in 2ms (Views: 1.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/cats" for ::1 at 2021-05-27 14:56:30 -0400
+
+ActionController::RoutingError - uninitialized constant CatsController:
+
+Started POST "/__better_errors/bf0bb1cc4e6232dd/variables" for ::1 at 2021-05-27 14:56:30 -0400
+Started GET "/cat" for ::1 at 2021-05-27 14:56:49 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/cat"):
+  
+actionpack (5.2.6) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.6) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.6) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.6) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.6) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.6) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.6) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.6) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+railties (5.2.6) lib/rails/engine.rb:524:in `call'
+puma (3.12.6) lib/puma/configuration.rb:227:in `call'
+puma (3.12.6) lib/puma/server.rb:706:in `handle_request'
+puma (3.12.6) lib/puma/server.rb:476:in `process_client'
+puma (3.12.6) lib/puma/server.rb:334:in `block in run'
+puma (3.12.6) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/cats" for ::1 at 2021-05-27 14:57:04 -0400
+
+ActionController::RoutingError - uninitialized constant CatsController:
+
+Started POST "/__better_errors/daafab5733144eed/variables" for ::1 at 2021-05-27 14:57:04 -0400
+Started GET "/cats" for ::1 at 2021-05-27 14:57:32 -0400
+
+ActionController::RoutingError - uninitialized constant CatsController:
+
+Started POST "/__better_errors/5fc76a582d6c1c21/variables" for ::1 at 2021-05-27 14:57:32 -0400
+Started GET "/cats" for ::1 at 2021-05-27 14:57:53 -0400
+
+ActionController::RoutingError - uninitialized constant CatsController:
+
+Started POST "/__better_errors/ea3d02d5726639b1/variables" for ::1 at 2021-05-27 14:57:53 -0400
+Started GET "/cats" for ::1 at 2021-05-27 15:01:19 -0400
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/eric/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+Processing by CatsController#index as HTML
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.0ms)
+
+
+
+SyntaxError - syntax error, unexpected tCONSTANT, expecting '}'
+  message: "%{value} is not "M" or "F" " }, presence: true
+                             ^
+/home/eric/Desktop/ninety_nine_cats/app/models/cat.rb:5: syntax error, unexpected tCONSTANT, expecting keyword_end
+...age: "%{value} is not "M" or "F" " }, presence: true
+...                              ^
+/home/eric/Desktop/ninety_nine_cats/app/models/cat.rb:5: syntax error, unexpected '}', expecting keyword_end
+..."%{value} is not "M" or "F" " }, presence: true
+...                              ^:
+  app/models/cat.rb:5:in `'
+  app/controllers/cats_controller.rb:3:in `index'
+
+Started POST "/__better_errors/31ce3dce1d7bbd78/variables" for ::1 at 2021-05-27 15:01:20 -0400
+Started GET "/cats" for ::1 at 2021-05-27 15:04:44 -0400
+Processing by CatsController#index as HTML
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.0ms)
+
+
+
+ActionView::MissingTemplate - Missing template cats/index, application/index with {:locale=>[:en], :formats=>[:html], :variants=>[], :handlers=>[:raw, :erb, :html, :builder, :ruby, :coffee, :jbuilder]}. Searched in:
+  * "/home/eric/Desktop/ninety_nine_cats/app/views":
+  app/controllers/cats_controller.rb:4:in `index'
+
+Started POST "/__better_errors/96c989e01bd6c1ca/variables" for ::1 at 2021-05-27 15:04:44 -0400
+  [1m[36mCat Load (0.4ms)[0m  [1m[34mSELECT  "cats".* FROM "cats" LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ /home/eric/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+Started GET "/cats" for ::1 at 2021-05-27 15:07:56 -0400
+Processing by CatsController#index as HTML
+  Rendering cats/index.html.erb within layouts/application
+  [1m[36mCat Load (0.2ms)[0m  [1m[34mSELECT  "cats".* FROM "cats" LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ app/controllers/cats_controller.rb:4
+  [1m[36mCACHE Cat Load (0.0ms)[0m  [1m[34mSELECT  "cats".* FROM "cats" LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ app/controllers/cats_controller.rb:4
+  [1m[36mCACHE Cat Load (0.0ms)[0m  [1m[34mSELECT  "cats".* FROM "cats" LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ app/controllers/cats_controller.rb:4
+  [1m[36mCACHE Cat Load (0.0ms)[0m  [1m[34mSELECT  "cats".* FROM "cats" LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ app/controllers/cats_controller.rb:4
+  [1m[36mCACHE Cat Load (0.0ms)[0m  [1m[34mSELECT  "cats".* FROM "cats" LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ app/controllers/cats_controller.rb:4
+  [1m[36mCACHE Cat Load (0.0ms)[0m  [1m[34mSELECT  "cats".* FROM "cats" LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ app/controllers/cats_controller.rb:4
+  [1m[36mCACHE Cat Load (0.0ms)[0m  [1m[34mSELECT  "cats".* FROM "cats" LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ app/controllers/cats_controller.rb:4
+  [1m[36mCACHE Cat Load (0.0ms)[0m  [1m[34mSELECT  "cats".* FROM "cats" LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ app/controllers/cats_controller.rb:4
+  [1m[36mCACHE Cat Load (0.0ms)[0m  [1m[34mSELECT  "cats".* FROM "cats" LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ app/controllers/cats_controller.rb:4
+  [1m[36mCACHE Cat Load (0.0ms)[0m  [1m[34mSELECT  "cats".* FROM "cats" LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ app/controllers/cats_controller.rb:4
+  [1m[36mCACHE Cat Load (0.0ms)[0m  [1m[34mSELECT  "cats".* FROM "cats" LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ app/controllers/cats_controller.rb:4
+  [1m[36mCACHE Cat Load (0.0ms)[0m  [1m[34mSELECT  "cats".* FROM "cats" LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ app/controllers/cats_controller.rb:4
+  [1m[36mCACHE Cat Load (0.0ms)[0m  [1m[34mSELECT  "cats".* FROM "cats" LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ app/controllers/cats_controller.rb:4
+  [1m[36mCACHE Cat Load (0.0ms)[0m  [1m[34mSELECT  "cats".* FROM "cats" LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ app/controllers/cats_controller.rb:4
+  [1m[36mCACHE Cat Load (0.0ms)[0m  [1m[34mSELECT  "cats".* FROM "cats" LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ app/controllers/cats_controller.rb:4
+  [1m[36mCACHE Cat Load (0.0ms)[0m  [1m[34mSELECT  "cats".* FROM "cats" LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ app/controllers/cats_controller.rb:4
+  [1m[36mCACHE Cat Load (0.0ms)[0m  [1m[34mSELECT  "cats".* FROM "cats" LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ app/controllers/cats_controller.rb:4
+  [1m[36mCACHE Cat Load (0.0ms)[0m  [1m[34mSELECT  "cats".* FROM "cats" LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ app/controllers/cats_controller.rb:4
+  [1m[36mCACHE Cat Load (0.0ms)[0m  [1m[34mSELECT  "cats".* FROM "cats" LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ app/controllers/cats_controller.rb:4
+  [1m[36mCACHE Cat Load (0.0ms)[0m  [1m[34mSELECT  "cats".* FROM "cats" LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ app/controllers/cats_controller.rb:4
+  Rendered cats/index.html.erb within layouts/application (217.2ms)
+Completed 500 Internal Server Error in 220ms (ActiveRecord: 0.5ms)
+
+
+  [1m[36mCACHE Cat Load (0.0ms)[0m  [1m[34mSELECT  "cats".* FROM "cats" LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ /home/eric/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+  [1m[36mCACHE Cat Load (0.0ms)[0m  [1m[34mSELECT  "cats".* FROM "cats" LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ /home/eric/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+  [1m[36mCACHE Cat Load (0.0ms)[0m  [1m[34mSELECT  "cats".* FROM "cats" LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ /home/eric/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+  [1m[36mCACHE Cat Load (0.0ms)[0m  [1m[34mSELECT  "cats".* FROM "cats" LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ /home/eric/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+  [1m[36mCACHE Cat Load (0.0ms)[0m  [1m[34mSELECT  "cats".* FROM "cats" LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ /home/eric/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+  [1m[36mCACHE Cat Load (0.0ms)[0m  [1m[34mSELECT  "cats".* FROM "cats" LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ /home/eric/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+  [1m[36mCACHE Cat Load (0.0ms)[0m  [1m[34mSELECT  "cats".* FROM "cats" LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ /home/eric/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+  [1m[36mCACHE Cat Load (0.0ms)[0m  [1m[34mSELECT  "cats".* FROM "cats" LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ /home/eric/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+  [1m[36mCACHE Cat Load (0.0ms)[0m  [1m[34mSELECT  "cats".* FROM "cats" LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ /home/eric/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+  [1m[36mCACHE Cat Load (0.0ms)[0m  [1m[34mSELECT  "cats".* FROM "cats" LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ /home/eric/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+  [1m[36mCACHE Cat Load (0.0ms)[0m  [1m[34mSELECT  "cats".* FROM "cats" LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ /home/eric/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+  [1m[36mCACHE Cat Load (0.0ms)[0m  [1m[34mSELECT  "cats".* FROM "cats" LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ /home/eric/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+  [1m[36mCACHE Cat Load (0.0ms)[0m  [1m[34mSELECT  "cats".* FROM "cats" LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ /home/eric/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+  [1m[36mCACHE Cat Load (0.0ms)[0m  [1m[34mSELECT  "cats".* FROM "cats" LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ /home/eric/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+  [1m[36mCACHE Cat Load (0.0ms)[0m  [1m[34mSELECT  "cats".* FROM "cats" LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ /home/eric/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+  [1m[36mCACHE Cat Load (0.0ms)[0m  [1m[34mSELECT  "cats".* FROM "cats" LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ /home/eric/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+  [1m[36mCACHE Cat Load (0.0ms)[0m  [1m[34mSELECT  "cats".* FROM "cats" LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ /home/eric/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+  [1m[36mCACHE Cat Load (0.0ms)[0m  [1m[34mSELECT  "cats".* FROM "cats" LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ /home/eric/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+  [1m[36mCACHE Cat Load (0.0ms)[0m  [1m[34mSELECT  "cats".* FROM "cats" LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ /home/eric/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+  [1m[36mCACHE Cat Load (0.0ms)[0m  [1m[34mSELECT  "cats".* FROM "cats" LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ /home/eric/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+
+NameError - undefined local variable or method `cat' for #<#<Class:0x00007f37b87338a8>:0x00007f37b8181720>
+Did you mean?  @cats:
+  app/views/cats/index.html.erb:2:in `_app_views_cats_index_html_erb___3649732412472326589_69938644237000'
+  app/controllers/cats_controller.rb:4:in `index'
+
+Started POST "/__better_errors/d85a4ab412b8cfbe/variables" for ::1 at 2021-05-27 15:07:56 -0400
+  [1m[36mCat Load (0.4ms)[0m  [1m[34mSELECT  "cats".* FROM "cats" LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ /home/eric/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+  [1m[36mCACHE Cat Load (0.0ms)[0m  [1m[34mSELECT  "cats".* FROM "cats" LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ /home/eric/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+  [1m[36mCACHE Cat Load (0.0ms)[0m  [1m[34mSELECT  "cats".* FROM "cats" LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ /home/eric/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+  [1m[36mCACHE Cat Load (0.0ms)[0m  [1m[34mSELECT  "cats".* FROM "cats" LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ /home/eric/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+  [1m[36mCACHE Cat Load (0.0ms)[0m  [1m[34mSELECT  "cats".* FROM "cats" LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ /home/eric/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+  [1m[36mCACHE Cat Load (0.0ms)[0m  [1m[34mSELECT  "cats".* FROM "cats" LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ /home/eric/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+  [1m[36mCACHE Cat Load (0.0ms)[0m  [1m[34mSELECT  "cats".* FROM "cats" LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ /home/eric/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+  [1m[36mCACHE Cat Load (0.0ms)[0m  [1m[34mSELECT  "cats".* FROM "cats" LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ /home/eric/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+  [1m[36mCACHE Cat Load (0.0ms)[0m  [1m[34mSELECT  "cats".* FROM "cats" LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ /home/eric/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+  [1m[36mCACHE Cat Load (0.0ms)[0m  [1m[34mSELECT  "cats".* FROM "cats" LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ /home/eric/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+  [1m[36mCACHE Cat Load (0.0ms)[0m  [1m[34mSELECT  "cats".* FROM "cats" LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ /home/eric/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+Started GET "/cats" for ::1 at 2021-05-27 15:27:26 -0400
+Processing by CatsController#index as HTML
+  Rendering cats/index.html.erb within layouts/application
+  [1m[36mCat Load (0.3ms)[0m  [1m[34mSELECT "cats".* FROM "cats"[0m
+  ↳ app/views/cats/index.html.erb:2
+  Rendered cats/index.html.erb within layouts/application (0.9ms)
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.3ms)
+
+
+
+SyntaxError - syntax error, unexpected tLABEL_END, expecting tSTRING_CONTENT or tSTRING_DBEG or tSTRING_DVAR or tSTRING_END
+...pend=( 'data-turbolinks-track': 'reload' );@output_buffer.sa...
+...                             ^~:
+  app/views/layouts/application.html.erb:9:in `'
+  app/controllers/cats_controller.rb:4:in `index'
+
+Started POST "/__better_errors/a58efa3151dd7866/variables" for ::1 at 2021-05-27 15:27:26 -0400
+Started GET "/cats" for ::1 at 2021-05-27 15:28:58 -0400
+Processing by CatsController#index as HTML
+  Rendering cats/index.html.erb within layouts/application
+  [1m[36mCat Load (0.3ms)[0m  [1m[34mSELECT "cats".* FROM "cats"[0m
+  ↳ app/views/cats/index.html.erb:2
+  Rendered cats/index.html.erb within layouts/application (1.3ms)
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.3ms)
+
+
+
+SyntaxError - syntax error, unexpected '<'
+  </head>
+  ^
+/home/eric/Desktop/ninety_nine_cats/app/views/layouts/application.html.erb:14: unknown regexp options - bdy
+/home/eric/Desktop/ninety_nine_cats/app/views/layouts/application.html.erb:15: syntax error, unexpected '<'
+</html>
+^
+/home/eric/Desktop/ninety_nine_cats/app/views/layouts/application.html.erb:20: unterminated regexp meets end of file
+          end
+             ^
+/home/eric/Desktop/ninety_nine_cats/app/views/layouts/application.html.erb:20: syntax error, unexpected end-of-input, expecting ')'
+          end
+             ^:
+  app/views/layouts/application.html.erb:10:in `'
+  app/controllers/cats_controller.rb:4:in `index'
+
+Started POST "/__better_errors/2d57f564c380bc1d/variables" for ::1 at 2021-05-27 15:28:58 -0400
+Started GET "/cats" for ::1 at 2021-05-27 15:30:15 -0400
+Processing by CatsController#index as HTML
+  Rendering cats/index.html.erb within layouts/application
+  [1m[36mCat Load (0.2ms)[0m  [1m[34mSELECT "cats".* FROM "cats"[0m
+  ↳ app/views/cats/index.html.erb:2
+  Rendered cats/index.html.erb within layouts/application (1.1ms)
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.2ms)
+
+
+
+SyntaxError - syntax error, unexpected tIDENTIFIER, expecting ')'
+...;@output_buffer.append=( #'data-turbolinks-track': 'reload' ...
+...                           ^~~~
+/home/eric/Desktop/ninety_nine_cats/app/views/layouts/application.html.erb:9: syntax error, unexpected tSTRING_BEG, expecting keyword_do or '{' or '('
+...pend=( #'data-turbolinks-track': 'reload' );@output_buffer.s...
+...                              ^
+/home/eric/Desktop/ninety_nine_cats/app/views/layouts/application.html.erb:9: syntax error, unexpected tIDENTIFIER, expecting ')'
+...data-turbolinks-track': 'reload' );@output_buffer.safe_appen...
+...                         ^~~~~~
+/home/eric/Desktop/ninety_nine_cats/app/views/layouts/application.html.erb:10: syntax error, unexpected '<', expecting ')'
+  </head>
+  ^
+/home/eric/Desktop/ninety_nine_cats/app/views/layouts/application.html.erb:14: unknown regexp options - bdy
+/home/eric/Desktop/ninety_nine_cats/app/views/layouts/application.html.erb:15: syntax error, unexpected '<'
+</html>
+^
+/home/eric/Desktop/ninety_nine_cats/app/views/layouts/application.html.erb:20: unterminated regexp meets end of file
+          end
+             ^
+/home/eric/Desktop/ninety_nine_cats/app/views/layouts/application.html.erb:20: syntax error, unexpected end-of-input, expecting ')'
+          end
+             ^:
+  app/views/layouts/application.html.erb:9:in `'
+  app/controllers/cats_controller.rb:4:in `index'
+
+Started POST "/__better_errors/e0b0df9e2ee2a817/variables" for ::1 at 2021-05-27 15:30:15 -0400
+Started GET "/cats" for ::1 at 2021-05-27 15:30:23 -0400
+Processing by CatsController#index as HTML
+  Rendering cats/index.html.erb within layouts/application
+  [1m[36mCat Load (0.2ms)[0m  [1m[34mSELECT "cats".* FROM "cats"[0m
+  ↳ app/views/cats/index.html.erb:2
+  Rendered cats/index.html.erb within layouts/application (0.9ms)
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.2ms)
+
+
+
+SyntaxError - syntax error, unexpected tIDENTIFIER, expecting ')'
+...;@output_buffer.append=( #'data-turbolinks-track': 'reload' ...
+...                           ^~~~
+/home/eric/Desktop/ninety_nine_cats/app/views/layouts/application.html.erb:9: syntax error, unexpected tSTRING_BEG, expecting keyword_do or '{' or '('
+...pend=( #'data-turbolinks-track': 'reload' );@output_buffer.s...
+...                              ^
+/home/eric/Desktop/ninety_nine_cats/app/views/layouts/application.html.erb:9: syntax error, unexpected tIDENTIFIER, expecting ')'
+...data-turbolinks-track': 'reload' );@output_buffer.safe_appen...
+...                         ^~~~~~
+/home/eric/Desktop/ninety_nine_cats/app/views/layouts/application.html.erb:10: syntax error, unexpected '<', expecting ')'
+  </head>
+  ^
+/home/eric/Desktop/ninety_nine_cats/app/views/layouts/application.html.erb:14: unknown regexp options - bdy
+/home/eric/Desktop/ninety_nine_cats/app/views/layouts/application.html.erb:15: syntax error, unexpected '<'
+</html>
+^
+/home/eric/Desktop/ninety_nine_cats/app/views/layouts/application.html.erb:20: unterminated regexp meets end of file
+          end
+             ^
+/home/eric/Desktop/ninety_nine_cats/app/views/layouts/application.html.erb:20: syntax error, unexpected end-of-input, expecting ')'
+          end
+             ^:
+  app/views/layouts/application.html.erb:9:in `'
+  app/controllers/cats_controller.rb:4:in `index'
+
+Started POST "/__better_errors/ed8e7002b6ab9367/variables" for ::1 at 2021-05-27 15:30:23 -0400
+Started GET "/cats" for ::1 at 2021-05-27 15:31:03 -0400
+Processing by CatsController#index as HTML
+  Rendering cats/index.html.erb within layouts/application
+  [1m[36mCat Load (0.2ms)[0m  [1m[34mSELECT "cats".* FROM "cats"[0m
+  ↳ app/views/cats/index.html.erb:2
+  Rendered cats/index.html.erb within layouts/application (1.3ms)
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.2ms)
+
+
+
+SyntaxError - syntax error, unexpected tIDENTIFIER, expecting ')'
+...esheet_link_tag    'application', media: 'all', 'data-turbol...
+...                    ^~~~~~~~~~~
+/home/eric/Desktop/ninety_nine_cats/app/views/layouts/application.html.erb:8: syntax error, unexpected tIDENTIFIER, expecting ')'
+...g    'application', media: 'all', 'data-turbolinks-track': '...
+...                            ^~~
+/home/eric/Desktop/ninety_nine_cats/app/views/layouts/application.html.erb:8: syntax error, unexpected tIDENTIFIER, expecting ')'
+...plication', media: 'all', 'data-turbolinks-track': 'reload' ...
+...                           ^~~~
+/home/eric/Desktop/ninety_nine_cats/app/views/layouts/application.html.erb:8: syntax error, unexpected tSTRING_BEG, expecting keyword_do or '{' or '('
+... 'all', 'data-turbolinks-track': 'reload' );@output_buffer.s...
+...                              ^
+/home/eric/Desktop/ninety_nine_cats/app/views/layouts/application.html.erb:8: syntax error, unexpected tIDENTIFIER, expecting ')'
+...data-turbolinks-track': 'reload' );@output_buffer.safe_appen...
+...                         ^~~~~~
+/home/eric/Desktop/ninety_nine_cats/app/views/layouts/application.html.erb:9: syntax error, unexpected tIDENTIFIER, expecting ')'
+...;@output_buffer.append=( #'data-turbolinks-track': 'reload' ...
+...                           ^~~~
+/home/eric/Desktop/ninety_nine_cats/app/views/layouts/application.html.erb:9: syntax error, unexpected tSTRING_BEG, expecting keyword_do or '{' or '('
+...pend=( #'data-turbolinks-track': 'reload' );@output_buffer.s...
+...                              ^
+/home/eric/Desktop/ninety_nine_cats/app/views/layouts/application.html.erb:9: syntax error, unexpected tIDENTIFIER, expecting ')'
+...data-turbolinks-track': 'reload' );@output_buffer.safe_appen...
+...                         ^~~~~~
+/home/eric/Desktop/ninety_nine_cats/app/views/layouts/application.html.erb:10: syntax error, unexpected '<', expecting ')'
+  </head>
+  ^
+/home/eric/Desktop/ninety_nine_cats/app/views/layouts/application.html.erb:14: unknown regexp options - bdy
+/home/eric/Desktop/ninety_nine_cats/app/views/layouts/application.html.erb:15: syntax error, unexpected '<'
+</html>
+^
+/home/eric/Desktop/ninety_nine_cats/app/views/layouts/application.html.erb:20: unterminated regexp meets end of file
+          end
+             ^
+/home/eric/Desktop/ninety_nine_cats/app/views/layouts/application.html.erb:20: syntax error, unexpected end-of-input, expecting ')'
+          end
+             ^:
+  app/views/layouts/application.html.erb:8:in `'
+  app/controllers/cats_controller.rb:4:in `index'
+
+Started POST "/__better_errors/1f0b5217a90bf142/variables" for ::1 at 2021-05-27 15:31:03 -0400
+Started GET "/cats" for ::1 at 2021-05-27 15:31:28 -0400
+Processing by CatsController#index as HTML
+  Rendering cats/index.html.erb within layouts/application
+  [1m[36mCat Load (0.2ms)[0m  [1m[34mSELECT "cats".* FROM "cats"[0m
+  ↳ app/views/cats/index.html.erb:2
+  Rendered cats/index.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 4ms (Views: 3.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/cats" for ::1 at 2021-05-27 15:31:58 -0400
+Processing by CatsController#index as HTML
+  Rendering cats/index.html.erb within layouts/application
+  [1m[36mCat Load (0.2ms)[0m  [1m[34mSELECT "cats".* FROM "cats"[0m
+  ↳ app/views/cats/index.html.erb:2
+  Rendered cats/index.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 3ms (Views: 2.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/cats" for ::1 at 2021-05-27 15:32:02 -0400
+Processing by CatsController#index as HTML
+  Rendering cats/index.html.erb within layouts/application
+  [1m[36mCat Load (0.3ms)[0m  [1m[34mSELECT "cats".* FROM "cats"[0m
+  ↳ app/views/cats/index.html.erb:2
+  Rendered cats/index.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 4ms (Views: 2.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/cats" for ::1 at 2021-05-27 15:38:54 -0400
+Processing by CatsController#index as HTML
+  Rendering cats/index.html.erb within layouts/application
+  [1m[36mCat Load (0.3ms)[0m  [1m[34mSELECT "cats".* FROM "cats"[0m
+  ↳ app/views/cats/index.html.erb:2
+  Rendered cats/index.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 2ms (Views: 1.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/cats.1" for ::1 at 2021-05-27 15:39:14 -0400
+Processing by CatsController#index as 
+  Rendering cats/index.html.erb within layouts/application
+  [1m[36mCat Load (0.2ms)[0m  [1m[34mSELECT "cats".* FROM "cats"[0m
+  ↳ app/views/cats/index.html.erb:2
+  Rendered cats/index.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 5ms (Views: 4.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/cats/1" for ::1 at 2021-05-27 15:39:19 -0400
+Processing by CatsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCat Load (0.1ms)[0m  [1m[34mSELECT  "cats".* FROM "cats" WHERE "cats"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/cats_controller.rb:8
+Completed 404 Not Found in 7ms (ActiveRecord: 2.1ms)
+
+
+
+ActiveRecord::RecordNotFound - Couldn't find Cat with 'id'=1:
+  app/controllers/cats_controller.rb:8:in `show'
+
+Started POST "/__better_errors/d4a3b5400f1b31f0/variables" for ::1 at 2021-05-27 15:39:19 -0400
+Started GET "/cats/1" for ::1 at 2021-05-27 15:39:49 -0400
+Processing by CatsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCat Load (0.2ms)[0m  [1m[34mSELECT  "cats".* FROM "cats" WHERE "cats"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/cats_controller.rb:8
+Completed 404 Not Found in 1ms (ActiveRecord: 0.2ms)
+
+
+
+ActiveRecord::RecordNotFound - Couldn't find Cat with 'id'=1:
+  app/controllers/cats_controller.rb:8:in `show'
+
+Started POST "/__better_errors/08c4e427d0d790c6/variables" for ::1 at 2021-05-27 15:39:49 -0400
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:8
+  [1m[36mCat Create (0.8ms)[0m  [1m[32mINSERT INTO "cats" ("birth_date", "color", "name", "sex", "created_at", "updated_at", "age") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["birth_date", 1992], ["color", "red"], ["name", "Boots"], ["sex", "M"], ["created_at", "2021-05-27 19:40:20.183595"], ["updated_at", "2021-05-27 19:40:20.183595"], ["age", "6"]]
+  ↳ db/seeds.rb:8
+  [1m[35m (0.0ms)[0m  [1m[31mROLLBACK[0m
+  ↳ db/seeds.rb:8
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:8
+  [1m[36mCat Create (0.7ms)[0m  [1m[32mINSERT INTO "cats" ("birth_date", "color", "name", "sex", "created_at", "updated_at", "age") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["birth_date", 1973], ["color", "red"], ["name", "Boots"], ["sex", "M"], ["created_at", "2021-05-27 19:41:03.568739"], ["updated_at", "2021-05-27 19:41:03.568739"], ["age", "6"]]
+  ↳ db/seeds.rb:8
+  [1m[35m (0.0ms)[0m  [1m[31mROLLBACK[0m
+  ↳ db/seeds.rb:8
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
